@@ -1,0 +1,33 @@
+extends ../node_modules/jade-bootstrap/layouts/navbar-fixed-force
+
+append body
+
+  +navbar-fixed("Force.com Sample","navbar")
+    +nav_item("#","active") Accounts
+    +nav_item("#") Contacts
+    +nav_item("#") Opportunities
+  
+  .container
+    div(style='padding-bottom:50px;')
+ 
+    div
+      table.table.table-striped.table-hover.span12
+        thead
+          tr 
+            th Id 
+            th Name
+            th Type
+            th CreatedDate
+        tbody
+          - each r in records
+            tr
+              td= r.get('Id') 
+              td= r.get('Name')
+              td= r.get('Type')
+              td= r.get('CreatedDate')
+
+
+ 
+
+       
+
