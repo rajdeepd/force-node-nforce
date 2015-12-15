@@ -2,10 +2,11 @@ extends ../node_modules/jade-bootstrap/layouts/navbar-fixed-force
 
 append body
 
-  +navbar-fixed("","navbar", "inverse")
+  +navbar("force.com","navbar", "inverse")
     +nav_item("/accounts","active") Accounts
     +nav_item("/contacts") Contacts
     +nav_item("#") Opportunities
+
   
   .container
     div(style='padding-bottom:100px;')
