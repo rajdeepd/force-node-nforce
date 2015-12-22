@@ -1,5 +1,15 @@
-extends layout
+extends ../node_modules/jade-bootstrap/layouts/navbar-fixed-force
 
-block content
-  h1= title
-  p Welcome to #{title}
+append body
+
+  +navbar("Force.com","navbar", "inverse")
+    +nav_item("/") Home
+    +nav_item("/accounts") Accounts
+    +nav_item("/contacts","active") Contacts
+    +nav_item("#") Opportunities
+  
+  .container
+    div(style='padding-bottom:10px;')
+    .jumbotron
+
+      p This Demo application shows how to run Node.js with force.com as the backend using nforce npm module.

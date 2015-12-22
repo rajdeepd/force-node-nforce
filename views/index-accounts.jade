@@ -2,14 +2,15 @@ extends ../node_modules/jade-bootstrap/layouts/navbar-fixed-force
 
 append body
 
-  +navbar("force.com","navbar", "inverse")
+  +navbar("Force.com","navbar", "inverse")
+    +nav_item("/") Home
     +nav_item("/accounts","active") Accounts
     +nav_item("/contacts") Contacts
     +nav_item("#") Opportunities
 
   
   .container
-    div(style='padding-bottom:100px;')
+    div(style='padding-bottom:10px;')
  
     div
       form.form-signin(action="/create-account", method="get")
